@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+:root {
+    --text : #02040F;
+    --gray: #E5DADA;
+    --yellow: #E59500;
+    --claret: #840032;
+    --dark-purple: #2C193D;
+    --prussian: #002642;
+    --rust: #B54B19;
+}
+/* Global styles
+------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    color: var(--text);
+    margin: 0;
+    padding: 0; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+img {
+    width: 300px;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+h1, h2 {
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+.content-wrap {
+    width: 900px;
+    margin: 0 auto;
+    padding: 60px 0; /* much better*/
+
+
+}
+    
+
+/*Profile
+---------------------------------------------------------*/
+
+header{
+    background-color: var(--claret);
+    color: var(--gray);
+    text-align: center;
+}
+
+
+/*Projects 
+-------------------------------------------------------*/
+.projects  {
+    background: var(--yellow);
+}
+ a {
+    
+    color: var(--gray);
+}
+.projects .btn {
+text-decoration: none;
+background-color: var(--claret);
+color: var(--gray);
+padding: .6em;
+border-radius: 3px;
+display: inline-block; /*better aproach*/
+}
+.projects .btn:hover {
+background-color: rgba(132, 0, 50, 80%);
+}
+
+/*Work Experience 
+-----------------------------------------------------------*/
+
+.work-experience {
+    background-color: var(--prussian);
+    color: var(--gray);
+}
+
+
+
+
+
+/*footer 
+----------------------------------------------------------*/
+footer {
+    background-color: var(--claret); 
+    color: var(--gray);
+    text-align: center;
+}
+/* Contact
+-----------------------------------------------------------*/
+.contact-ul {
+    list-style-type: none;
+    padding: 0; 
+    display: flex;
+    justify-content: center;
+}
+.contact-ul a {
+    padding: 1.2em;
+    display: inline-block;
+}
