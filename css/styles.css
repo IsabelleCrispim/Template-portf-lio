@@ -92,6 +92,11 @@ background-color: rgba(132, 0, 50, 80%);
     background-color: var(--prussian);
     color: var(--gray);
 }
+.project-item {
+    display: grid; 
+    grid-template-columns: 1fr 2fr;
+    column-gap: 15px;
+}
 
 
 
