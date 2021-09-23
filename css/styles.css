@@ -44,14 +44,26 @@ h1, h2 {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
 }
-
-.content-wrap {
-    width: 900px;
-    margin: 0 auto;
-    padding: 60px 0; /* much better*/
-
+h3 {
+    margin: 0;
+}
+h3 + p {
+    font-style: italic;
 
 }
+h3 ~ p {
+    margin: 0 ;
+}
+
+
+.content-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 85%;
+    padding: 60px 0; /* much better*/
+}
+
+
     
 
 /*Profile
@@ -60,8 +72,9 @@ h1, h2 {
 header{
     background-color: var(--claret);
     color: var(--gray);
-    text-align: center;
+   
 }
+
 
 
 /*Projects 
@@ -92,32 +105,71 @@ background-color: rgba(132, 0, 50, 80%);
     background-color: var(--prussian);
     color: var(--gray);
 }
-.project-item {
-    display: grid; 
-    grid-template-columns: 1fr 2fr;
-    column-gap: 15px;
+.work-experience .project-item {
+    display: block;    
 }
 
-
-
-
-
-/*footer 
-----------------------------------------------------------*/
-footer {
-    background-color: var(--claret); 
-    color: var(--gray);
-    text-align: center;
+/* Education
+--------------------------------------------------------*/
+.education {
+    background-color: var(--yellow);
 }
+
 /* Contact
 -----------------------------------------------------------*/
 .contact-ul {
     list-style-type: none;
     padding: 0; 
-    display: flex;
-    justify-content: center;
+    
 }
 .contact-ul a {
     padding: 1.2em;
     display: inline-block;
+}
+.divider > section {
+    border-bottom: 1px dashed var(--gray);
+    padding: 25px 0;
+}
+.divider > section:last-of-type {
+    border-bottom: none; 
+}
+/*footer 
+----------------------------------------------------------*/
+footer {
+    background-color: var(--claret); 
+    color: var(--gray);
+    
+}
+/*Responsive
+----------------------------------------------------------*/
+
+@media screen and (min-width: 670px) {
+    header, footer {
+        text-align: center;
+    }
+    .project-item {
+        display: grid; 
+        grid-template-columns: 1fr 2fr;
+        column-gap: 15px;
+    }
+    .work-experience .project-item {
+        display: block;
+    }
+    .contact-ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 669px) {
+    h1 {
+        font-size: 40px; 
+    }
+    h1,h2 {
+        line-height: 1;
+    }
+
+    .contact-ul a {
+        padding: 5px;
+    }
 }
